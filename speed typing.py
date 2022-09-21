@@ -27,7 +27,7 @@ class Game:
         
        
         pygame.init()
-        self.open_img = pygame.image.load('type-speed-open.png')
+        self.open_img = pygame.image.load('open.png')
         self.open_img = pygame.transform.scale(self.open_img, (self.w,self.h))
 
 
@@ -35,7 +35,7 @@ class Game:
         self.bg = pygame.transform.scale(self.bg, (500,750))
 
         self.screen = pygame.display.set_mode((self.w,self.h))
-        pygame.display.set_caption('Type Speed test')
+        pygame.display.set_caption('Typing Speed test')
        
         
     def draw_text(self, screen, msg, y ,fsize, color):
@@ -46,7 +46,7 @@ class Game:
         pygame.display.update()   
         
     def get_sentence(self):
-        f = open('sentences.txt').read()
+        f = open('exampleSentences.txt').read()
         sentences = f.split('\n')
         sentence = random.choice(sentences)
         return sentence
@@ -155,7 +155,7 @@ class Game:
         #drawing heading
         self.screen.fill((0,0,0))
         self.screen.blit(self.bg,(0,0))
-        msg = "Typing Speed Test"
+        msg = "Typing Speed - Test"
         self.draw_text(self.screen, msg,80, 80,self.HEAD_C)  
         # draw the rectangle for input box
         pygame.draw.rect(self.screen,(255,192,25), (50,250,650,50), 2)
