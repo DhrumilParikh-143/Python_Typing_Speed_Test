@@ -27,7 +27,7 @@ class Game:
         
        
         pygame.init()
-        self.open_img = pygame.image.load('open.png')
+        self.open_img = pygame.image.load('type-speed-open.png')
         self.open_img = pygame.transform.scale(self.open_img, (self.w,self.h))
 
 
